@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomePage = () => {
     <div className='homepage'>
-        <div className >
+        <div className='directory-menu'>
 
         </div>
     </div>
