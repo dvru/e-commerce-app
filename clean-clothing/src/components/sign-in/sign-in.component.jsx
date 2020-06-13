@@ -28,7 +28,6 @@ render() {
             <div className='sign-in'>
                 <h2>I already have an account</h2>
                 <span>Sign in with your email and password</span>
-
                 <form onSubmit={this.handleSubmit}>
                     <input name="email" type="email" onChange={this.handleChange} value={this.state.email} required />
                     <label>Email</label>
