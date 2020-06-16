@@ -1,0 +1,16 @@
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+
+const config = {
+    apiKey: "AIzaSyA-8vNZfBx1k-u-aLSZ8xNOFVQjO4XWGwQ",
+    authDomain: "clean-db-cdbf9.firebaseapp.com",
+    databaseURL: "https://clean-db-cdbf9.firebaseio.com",
+    projectId: "clean-db-cdbf9",
+    storageBucket: "clean-db-cdbf9.appspot.com",
+    messagingSenderId: "637938925167",
+    appId: "1:637938925167:web:5a710b28337171dc54179a",
+    measurementId: "G-E2151JYQNP"
+  };
+
+  firebase.initializeApp(config);
