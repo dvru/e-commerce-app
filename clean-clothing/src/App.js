@@ -22,9 +22,16 @@ constructor() {
 unsubcribeFromAuth = null;
   
 componentDidMount() {
-  this.unsubcribeFromAuth = auth.onAuthStateChanged(async user => {
-    createUserProfileDocument(user);
-  })
+  this.unsubcribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    if (userAuth) {
+      const userRef = await createUserProfileDocument(userAuth);
+
+      userRef.onSnapshot(snapShot => {
+        console.log(snapShot);
+      })
+
+    }
+  });
 }
 
 componentWillUnmount() {
