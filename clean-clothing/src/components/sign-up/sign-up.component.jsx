@@ -29,14 +29,30 @@ handleSubmit = async event => {
         alert("passwords don't match");
         return;
     }
+    try {
+        const { user } = await auth.createUserWithEmailAndPassword( 
+            email, 
+            password
+            );
 
-    try{
+        await createUserProfileDocument(user, {displayName});
 
-    } catch {
-
+        this.setState( {
+            displayName: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+        });
+    } catch (error) {
+        console.log(error);
     }
 }
 
+handleChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({[name]: value});
+}
 
 
     render() {
