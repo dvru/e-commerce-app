@@ -23,9 +23,9 @@ class SignUp extends React.Component {
 handleSubmit = async event => {
     event.preventDefault();
 
-    const { displayName, email, password, confirmPassword}
+    const { displayName, email, password, confirmPassword} = this.state;
 
-    if(password === confirmPassword) {
+    if (password !== confirmPassword) {
         alert("passwords don't match");
         return;
     }
@@ -43,8 +43,9 @@ handleSubmit = async event => {
             password: '',
             confirmPassword: ''
         });
+
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
@@ -56,8 +57,8 @@ handleChange = event => {
 
 
     render() {
-        const { displayName, email, password, confirmPassword}
-        return(
+        const { displayName, email, password, confirmPassword} = this.state;
+        return (
             <div className='sign-up'>
             <h2 className='title'>I do not have a account</h2>
             <span>Sign up with your email and password</span>
@@ -66,7 +67,7 @@ handleChange = event => {
                 type='text'
                 name='displayName'
                 value={displayName}
-                onChange={this.handleSubmit}
+                onChange={this.handleChange}
                 label='Display Name'
                 required
                 />
@@ -74,15 +75,15 @@ handleChange = event => {
                 type='email'
                 name='email'
                 value={email}
-                onChange={this.handleSubmit}
+                onChange={this.handleChange}
                 label='Email'
                 required
                 />
-                     <FormInput
+                <FormInput
                 type='password'
                 name='password'
                 value={password}
-                onChange={this.handleSubmit}
+                onChange={this.handleChange}
                 label='Password'
                 required
                 />
@@ -90,7 +91,7 @@ handleChange = event => {
                 type='password'
                 name='confirmPassword'
                 value={confirmPassword}
-                onChange={this.handleSubmit}
+                onChange={this.handleChange}
                 label='Confirm Password'
                 required
                 />
