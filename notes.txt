@@ -1,0 +1,23 @@
+QueryReference:
+
+A Query is a request we make to firestone to give us something
+from the db
+
+firestone returns us 2 types of object:
+    refernces and snapshots
+Of these objects, they can be either Document or Collection versions
+
+firestone will always return us these objects, even if nothin exists
+from that Query
+
+A QueryReference object is an object that represents the "current" 
+place in the db that we are quering.
+
+We get them by calling either: 
+firestone.doc('/user/:userId');
+firestone.collections('/users');
+ 
+The QueryReference object does not have the actual data of the collection
+or Document. It instead has properties that tell us details about it, 
+or the method to get the snapshot object which gives us te data we are looking for.
+
