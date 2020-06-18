@@ -38,7 +38,7 @@ componentDidMount() {
 
     this.setState({currentUser: userAuth});
   });
-}
+}ç
 
 componentWillUnmount() {
   this.unsubcribeFromAuth();
