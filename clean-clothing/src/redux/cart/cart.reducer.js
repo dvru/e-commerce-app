@@ -10,10 +10,10 @@ const cartReducer = (state = INTITIAL_STATE, action) => {
             return {
                 ...state,
                 hidden: !state.hidden
-            }
+            };
             default:
                 return state; 
     }
-}
+};
 
 export default cartReducer;
