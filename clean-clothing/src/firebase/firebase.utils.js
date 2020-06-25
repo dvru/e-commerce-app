@@ -68,6 +68,14 @@ const config = {
     }, {});
   };
 
+  export const getCurrentUser = () => {
+      return new Promise((resolve, reject) => {
+          const unsubscribe = auth.onAuthStateChanged(userAuth => {
+              unsubscribe();
+              resolve(userAuth);
+          }, reject)
+      })
+  }
 
   firebase.initializeApp(config);
 
