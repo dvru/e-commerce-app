@@ -22,6 +22,7 @@ handleSubmit = async event => {
     event.preventDefault();
     const { emailSignInStart } = this.props;
     const { email, password } = this.state;
+    
     emailSignInStart(email, password);
 };
 
@@ -58,7 +59,11 @@ render() {
                     
                     <div className='button'>
                     <CustomButton type='submit'> Sign in </CustomButton> 
-                    <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn> 
+                    <CustomButton 
+                    type='button' 
+                    onClick={googleSignInStart} 
+                    isGoogleSignIn
+                    > 
                     Sign in with Google
                     </CustomButton> 
                     </div>
