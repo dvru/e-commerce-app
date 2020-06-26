@@ -10,6 +10,7 @@ import { signOutStart } from '../../redux/user/user.actions'
 
 import { ReactComponent as Logo } from '../../assets/flower.svg'
 
+import './header.styles.scss'
 
 import {
     HeaderContainer, 
@@ -28,9 +29,11 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
             <OptionLink  to='/shop'>
             SHOP
             </OptionLink>
+            <div> | </div>
             <OptionLink to='/shop'>
             CONTACT
             </OptionLink>
+            <div> | </div>
             { currentUser ? (
                 <OptionLink as='div' onClick={signOutStart}> 
                 SIGN OUT 
