@@ -1,3 +1,5 @@
+//handles any error with an error page
+
 import React from 'react';
 
 import { ErrorImageOverlay, ErrorImageContainer, ErrorImageText } from './error.boundary.styles';
