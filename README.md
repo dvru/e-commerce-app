@@ -1,10 +1,11 @@
 # clean-clothing
 
-A Mobile Splash Mock-Up page, built using JavaScript, HTML, CSS, XD
+A Clothing E-commerce Application where you can view, add, delete and checkout clothing with demo credit card built using React, Node, Stripe API, Firebase
+
 
 ## Links
-- [LIVE DEMO](https://dvru.github.io/mockup-page/)
+- [LIVE DEMO](https://clean-live.herokuapp.com/)
 
 ## Preview
-![Preview](img/mock-preview.png)
+![Preview](E-commerce.png)
 
