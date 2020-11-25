@@ -21,6 +21,7 @@
     "express": "^4.16.4",
     "express-ssl": "^3.1.0",
     "express-sslify": "^1.2.0",
+    "lodash": "^4.17.19",
     "stripe": "6.28.0"
   },
   "devDependencies": {
